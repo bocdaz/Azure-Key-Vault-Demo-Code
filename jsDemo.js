@@ -1,4 +1,5 @@
 
+//see microsoft documentation for more info: https://learn.microsoft.com/en-us/azure/key-vault/keys/quick-create-node?tabs=windows
 //install libraries
 //npm install @azure/keyvault-keys
 //npm install @azure/identity
