@@ -1,5 +1,5 @@
 package com.keyvault.keys.quickstart;
-
+//see microsoft documentation for more info: https://learn.microsoft.com/en-us/azure/key-vault/keys/quick-create-java?tabs=azure-cli
 import com.azure.core.util.polling.SyncPoller;
 import com.azure.identity.DefaultAzureCredentialBuilder;
 
