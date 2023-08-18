@@ -27,7 +27,7 @@ add the following dependencies:
 class JavaDemo {
     public static void main(String []args) {
         String keyVaultName = System.getenv("KEY_VAULT_NAME");
-        String keyVaultUri = 'https://' + keyVaultName _ ".vault.azure.net";
+        String keyVaultUri = 'https://' + keyVaultName + ".vault.azure.net";
         KeyClient keyClient = new keyClientBuilder()
             .vaultUrl(keyVaultUri)
             .credential(new DefaultAzureCredentialBuilder().build())
