@@ -33,7 +33,7 @@ class JavaDemo {
             .credential(new DefaultAzureCredentialBuilder().build())
             .buildClient();
         //creating a key
-        String keyName = 'demo'
+        String keyName = 'demo';
         keyClient.createKey(keyName, KeyType.RSA);//creates a key named demo of type RSA
         //get a key
         KeyVaultKey retrievedKey = keyClient.getKey(keyName);
