@@ -9,31 +9,16 @@ import com.azure.security.keyvault.keys.models.DeletedKey;
 import com.azure.security.keyvault.keys.models.KeyType;
 import com.azure.security.keyvault.keys.models.KeyVaultKey;
 
-/*
-add the following dependencies:
-    <dependency>
-      <groupId>com.azure</groupId>
-      <artifactId>azure-security-keyvault-keys</artifactId>
-      <version>4.2.3</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.azure</groupId>
-      <artifactId>azure-identity</artifactId>
-      <version>1.2.0</version>
-    </dependency>
- */
-
 class JavaDemo {
     public static void main(String []args) {
         String keyVaultName = System.getenv("KEY_VAULT_NAME");
-        String keyVaultUri = 'https://' + keyVaultName + ".vault.azure.net";
+        String keyVaultUri = "https://" + keyVaultName + ".vault.azure.net";
         KeyClient keyClient = new keyClientBuilder()
             .vaultUrl(keyVaultUri)
             .credential(new DefaultAzureCredentialBuilder().build())
             .buildClient();
         //creating a key
-        String keyName = 'demo';
+        String keyName = "demo";
         keyClient.createKey(keyName, KeyType.RSA);//creates a key named demo of type RSA
         //get a key
         KeyVaultKey retrievedKey = keyClient.getKey(keyName);
